@@ -1,11 +1,6 @@
 const mongoose = require("mongoose");
 
 const urlSchema = new mongoose.Schema({
-  // user: {
-  //   type: mongoose.Schema.ObjectId,
-  //   ref: "User",
-  //   required: [true, "Url must be posted by a User"],
-  // },
   urlCode: String,
   longUrl: String,
   shortUrl: String,

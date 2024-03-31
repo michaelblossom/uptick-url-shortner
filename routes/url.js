@@ -3,7 +3,7 @@ const urlController = require("../controllers/urlController");
 const authController = require("../controllers/authController");
 // ROUTES
 const router = express.Router();
-// router.use(authController.protect); // this will protect all the middlewares under it from users that are not logged in
+router.use(authController.protect); // this will protect all the middlewares under it from users that are not logged in
 
 router
   .route("/shorten")

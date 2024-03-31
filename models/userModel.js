@@ -14,7 +14,6 @@ const userSchema = new mongoose.Schema(
       unique: true,
       lowercase: true,
     },
-    // photo: String,
     // role: {
     //   type: String,
     //   enum: ["user", "admin"],
