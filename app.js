@@ -11,6 +11,11 @@ if (process.env.NODE_ENV === "development") {
 app.use(express.json({ limit: "10kb" }));
 
 app.use(express.static(`${__dirname}/public`));
+
+app.get("/", (req, res, next) => {
+  res.send("Hello from middleware");
+  next();
+});
 //defining routes
 app.use("/", require("./routes/index"));
 app.use("/api/v1/url/", require("./routes/url"));
